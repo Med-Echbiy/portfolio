@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.cdnfonts.com/css/new-boba");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+
+:root {
+  font-family: "New Boba", sans-serif;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+.content {
+  min-height: calc(100vh - 75px);
+  .hero_image {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 115%;
+      height: 115%;
+      background-color: rgba(59, 59, 245, 0.87);
+      z-index: -1;
+      border-radius: 100%;
+    }
+  }
+  .title {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 300px;
+      height: 15px;
+      transform: skew(10deg) translateX(-50%);
+      background-color: #1fb6ff;
+      z-index: -1;
+    }
+  }
+}

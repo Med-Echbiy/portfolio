@@ -1,0 +1,138 @@
+<!-- {{ myForm.value | json }} -->
+
+<main
+  class="grid w-full gap-6 max-w-5xl grid-cols-1 md:grid-cols-2 justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+>
+  <section
+    class="py-4 rounded-lg drop-shadow-md mt-40 items-center justify-center h-full text-center flex flex-col gap-y-2 border border-solid"
+  >
+    <h1 class="text-6xl text-center mb-2">Contact</h1>
+    <div class="info roboto flex flex-col gap-y-3">
+      <p>Email: echbiymed@gmail.com</p>
+      <p>Num°: +212601051898</p>
+    </div>
+    <div class="social-media mt-3">
+      <h2 class="text-4xl">Social Media</h2>
+      <div class="flex items-center gap-3 mt-3 justify-center">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <ng-icon size="30" class="text-blue-500" name="radixLinkedinLogo" />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <ng-icon size="30" class="text-black" name="radixGithubLogo" />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <ng-icon size="30" class="text-pink-500" name="radixInstagramLogo" />
+        </a>
+      </div>
+    </div>
+  </section>
+  <form
+    [formGroup]="myForm"
+    class="flex flex-col gap-2 max-w-sm capitalize roboto"
+    (submit)="sendEmail($event)"
+  >
+    <label
+      [ngClass]="
+        myForm.controls['name'].status === 'INVALID' &&
+        myForm.controls['name'].touched
+          ? 'text-red-600'
+          : ''
+      "
+      for="name"
+      >name</label
+    >
+    <input
+      id="name"
+      required
+      type="text"
+      formControlName="name"
+      class="py-3 px-4 block w-full border-2 border-solid border-gray-600 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+      [ngClass]="
+        myForm.controls['name'].status === 'INVALID' &&
+        myForm.controls['name'].touched
+          ? 'border-red-600'
+          : ''
+      "
+    />
+    <span
+      *ngIf="
+        myForm.controls['name'].status === 'INVALID' &&
+        myForm.controls['name'].touched
+      "
+      class="text-xs text-red-600"
+    >
+      this name is not valid
+    </span>
+    <label
+      [ngClass]="
+        myForm.controls['email'].status === 'INVALID' &&
+        myForm.controls['email'].touched
+          ? 'text-red-600'
+          : ''
+      "
+      for="email"
+      >email</label
+    >
+    <input
+      required
+      id="email"
+      type="email"
+      formControlName="email"
+      class="py-3 px-4 block w-full border-2 border-solid border-gray-600 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+      [ngClass]="
+        myForm.controls['email'].status === 'INVALID' &&
+        myForm.controls['email'].touched
+          ? 'border-red-600'
+          : ''
+      "
+    />
+    <span
+      *ngIf="
+        myForm.controls['email'].status === 'INVALID' &&
+        myForm.controls['email'].touched
+      "
+      class="text-xs text-red-600"
+    >
+      Please Insert a valid email
+    </span>
+    <label
+      for="message"
+      [ngClass]="
+        myForm.controls['message'].status === 'INVALID' &&
+        myForm.controls['message'].touched
+          ? 'text-red-600'
+          : ''
+      "
+      >Message</label
+    >
+    <textarea
+      required
+      id="message"
+      class="py-3 px-4 block w-full border-2 border-solid border-gray-600 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+      formControlName="message"
+      rows="5"
+      [ngClass]="
+        myForm.controls['message'].status === 'INVALID' &&
+        myForm.controls['message'].touched
+          ? 'border-red-600'
+          : ''
+      "
+    ></textarea>
+    <span
+      *ngIf="
+        myForm.controls['message'].status === 'INVALID' &&
+        myForm.controls['message'].touched
+      "
+      class="text-xs text-red-600"
+    >
+      the message is empty
+    </span>
+    <input
+      type="submit"
+      class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800 cursor-pointer"
+      placeholder="send"
+      value="send"
+      [disabled]="myForm.status === 'INVALID'"
+    />
+  </form>
+</main>

@@ -1,0 +1,120 @@
+<main
+  class="grid grid-cols-4 absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-3"
+>
+  <section class="flex gap-y-3 flex-col w-full">
+    <div
+      class="w-full p-4 rounded-tl-3xl rounded-md flex flex-col gap-y-3 justify-center items-center relative border border-solid drop-shadow-md"
+    >
+      <figure class="max-w-[120px] rounded-full overflow-hidden">
+        <img src="assets/profile.png" alt="profile" />
+      </figure>
+      <div class="body text-center inter">
+        <h1 class="text-2xl font-semibold">Mohamed Echbiy</h1>
+        <p class="">@mohamedechbiy</p>
+        <!-- button -->
+        <a
+          href="https://www.fiverr.com/mohamedechbiy?up_rollout=true"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            type="button"
+            class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-green-500 text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800 mt-4"
+          >
+            Fiverr
+          </button>
+        </a>
+      </div>
+      <!-- badge -->
+      <span
+        class="inline-flex items-center gap-1.5 border border-solid absolute top-2 right-2 py-1.5 px-3 rounded-full text-xs font-medium"
+      >
+        <span class="w-1.5 h-1.5 inline-block bg-green-400 rounded-full"></span>
+        Online
+      </span>
+    </div>
+    <div
+      class="inter w-full hobbies drop-shadow-md border border-solid p-4 flex flex-col gap-y-2 rounded-md rounded-bl-3xl"
+    >
+      <h3 class="text-2xl font-semibold underline">Hobbies</h3>
+      <div class="flex items-center gap-2 mt-3">
+        <ng-icon name="tablerChessQueen" size="20" />
+        <p class="text-lg">Chess</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <ng-icon name="tablerSoccerField" size="20" />
+        <p class="text-lg">Football</p>
+      </div>
+    </div>
+  </section>
+  <section class="col-span-2">
+    <div
+      class="w-full hobbies drop-shadow-md border border-solid p-8 flex flex-col gap-y-2 rounded-md"
+    >
+      <h4 class="mb-4 text-4xl capitalize">personal Info</h4>
+      <div class="inter text-lg flex flex-col gap-y-3">
+        <p class="flex items-center gap-2">
+          <ng-icon name="radixAvatar" size="18" />
+          <span>: Mohamed Echbiy</span>
+        </p>
+        <!--  -->
+        <p class="flex items-center gap-2">
+          <ng-icon name="simpleGmail" size="18" />
+          <a href="#" routerLink="/contact">: echbiymed@gmail.com </a>
+        </p>
+        <!--  -->
+        <p class="flex flex-col gap-2">
+          <span class="underline">Brief about me: </span>
+          <span>
+            I've been on my web development journey for the past two years,
+            during which I've undertaken various projects to sharpen my skills.
+            I've collaborated with fellow developers and clients as a
+            freelancer, assisting in the creation of personal portfolios,
+            e-commerce websites, and service-oriented platforms, including
+            travel websites. My enthusiasm for expanding my expertise and
+            learning new techniques remains unwavering, and I'm eager to
+            continue building on my experiences.
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="flex flex-col gap-y-3 justify-between">
+    <div
+      class="w-full h-full p-4 rounded-tr-3xl rounded-md flex flex-col gap-y-3 justify-center items-center relative border border-solid drop-shadow-md"
+    >
+      <h5 class="text-3xl underline">Skills</h5>
+      <div class="mt-4 roboto flex flex-wrap items-center gap-3 gap-y-6">
+        <ng-icon name="simpleHtml5" size="30" class="text-orange-600" />
+        <ng-icon name="simpleCss3" size="30" class="text-blue-600" />
+        <ng-icon name="simpleJavascript" size="30" class="" />
+        <ng-icon name="simpleReact" size="30" class="text-blue-600" />
+        <ng-icon name="simpleAngular" size="30" class="text-red-600" />
+        <ng-icon name="simpleNextdotjs" size="30" class="text-black" />
+        <ng-icon name="simpleTailwindcss" size="30" class="text-cyan-500" />
+        <!-- simpleNodedotjs -->
+        <ng-icon name="simpleNodedotjs" size="30" class="text-green-500" />
+        <ng-icon name="simpleExpress" size="30" class="" />
+        <ng-icon name="simpleVuedotjs" size="30" class="text-green-600" />
+        <ng-icon name="simpleSolid" size="30" class="text-blue-500" />
+        <ng-icon name="simpleSvelte" size="30" class="text-orange-600" />
+      </div>
+    </div>
+    <div
+      class="w-full p-4 rounded-br-3xl rounded-md flex flex-col gap-y-3 justify-center items-center relative border border-solid drop-shadow-md"
+    >
+      <h5 class="text-3xl underline">Social Media</h5>
+      <div class="mt-4 roboto flex flex-wrap items-center gap-3 gap-y-6">
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <ng-icon name="radixLinkedinLogo" size="35" class="text-blue-700" />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <ng-icon name="radixInstagramLogo" size="35" class="text-pink-500" />
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <ng-icon name="radixGithubLogo" size="35" class="" />
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

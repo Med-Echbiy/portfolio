@@ -1,0 +1,54 @@
+<div
+  class="project grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-3 lg:justify-between"
+>
+  <div class="flex flex-col">
+    <p class="subheading uppercase text-sm inter">
+      0{{ project.index }}/project
+    </p>
+    <h3 [ngClass]="project.color" class="heading text-4xl font-semibold">
+      {{ project.title }}
+    </h3>
+    <p class="mt-8 inter flex flex-col gap-y-3 text-sm max-w-md">
+      <ng-container *ngFor="let feature of project.features">
+        <span> {{ feature }}</span>
+        <!-- <span> Integrates with SanityCMS for efficient content management.</span>
+      <span
+        >Admin dashboard: Real-time order tracking, data visualization, and
+        earnings insights.</span
+      >
+      <span>
+        User-focused: Personalized meal saving feature. Rewards system:
+        Point-based system for user engagement.
+      </span> -->
+      </ng-container>
+    </p>
+    <div
+      class="justify-self-end justify-items-end flex items-center gap-3 mt-12"
+    >
+      <button
+        [ngClass]="[project.color, project.bg]"
+        type="button"
+        class="py-[.688rem] px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm"
+      >
+        <a [href]="project.linkGithub" class="flex items-center gap-2"
+          >Github <ng-icon name="radixGithubLogo"></ng-icon>
+        </a>
+      </button>
+      <button
+        [ngClass]="[project.color, project.bg]"
+        type="button"
+        class="py-[.688rem] px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm dark:border-gray-700"
+      >
+        <a
+          [href]="project.linkLive"
+          target="_blank"
+          class="flex items-center gap-2"
+          >Live <ng-icon name="radixPlay"></ng-icon>
+        </a>
+      </button>
+    </div>
+  </div>
+  <div class="project_image drop-shadow-xl rounded-md overflow-hidden">
+    <img [src]="project.image" alt="" />
+  </div>
+</div>
