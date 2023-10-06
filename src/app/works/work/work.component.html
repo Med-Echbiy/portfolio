@@ -30,7 +30,10 @@
         type="button"
         class="py-[.688rem] px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm"
       >
-        <a [href]="project.linkGithub" class="flex items-center gap-2"
+        <a
+          target="_blank"
+          [href]="project.linkGithub"
+          class="flex items-center gap-2"
           >Github <ng-icon name="radixGithubLogo"></ng-icon>
         </a>
       </button>

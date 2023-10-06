@@ -12,7 +12,26 @@ export class WorksComponent implements OnInit {
   @HostBinding('@routeAnimationTrigger') routeAnimation = true;
   projects: Project[] = [
     {
-      linkGithub: '',
+      title: 'Smile',
+      linkGithub: 'https://github.com/animotime-v3/smiles-v2',
+      linkLive: 'https://smiles-v2.vercel.app/',
+      image: 'assets/smile.png',
+      features: [
+        'Homepage with clinic introduction',
+        'Online appointment scheduling',
+        'User profile management',
+        'Secure login and registration',
+        "Informative 'About Us' page",
+        'Detailed service descriptions',
+        'Contact page',
+        'Built with Angular, Tailwind CSS, and Strapi.',
+      ],
+      index: 1,
+      color: 'text-indigo-600',
+      bg: 'hover:bg-indigo-600 hover:border-indingo-600',
+    },
+    {
+      linkGithub: 'https://github.com/animotime-v3/yummy-s',
       linkLive: 'ttps://yummy-zeta.vercel.app/',
       image: 'assets/yummy.png',
       features: [
@@ -23,13 +42,13 @@ export class WorksComponent implements OnInit {
       ],
       title: 'YUMMY',
       color: 'text-yellow-500',
-      index: 1,
+      index: 2,
       bg: 'hover:bg-yellow-500  hover:border-yellow-500',
     },
     {
       title: 'ATLAS Travel',
-      index: 2,
-      linkGithub: '',
+      index: 3,
+      linkGithub: '#',
       linkLive: 'https://travelatlasmorocco.com/en/',
       color: 'text-orange-500',
       features: [
@@ -43,8 +62,8 @@ export class WorksComponent implements OnInit {
     },
     {
       title: 'Nassua',
-      index: 2,
-      linkGithub: '',
+      index: 4,
+      linkGithub: '#',
       linkLive: 'https://nassau.netlify.app/',
       color: 'text-balck',
       features: [
@@ -62,8 +81,8 @@ export class WorksComponent implements OnInit {
     },
     {
       title: 'AnimoTime',
-      index: 2,
-      linkGithub: '',
+      index: 5,
+      linkGithub: 'https://github.com/Mohamed-Echbiy/animo-timev3',
       linkLive: 'https://animotime.site/',
       color: 'text-lime-500',
       features: [
@@ -81,7 +100,7 @@ export class WorksComponent implements OnInit {
     },
     {
       title: 'Zorin Os',
-      linkGithub: '',
+      linkGithub: 'https://github.com/Mohamed-Echbiy/ZorinOs_Website_Clone',
       linkLive: 'https://zorin-clone.netlify.app/',
       image: 'assets/zorinos.png',
       features: [
@@ -89,7 +108,7 @@ export class WorksComponent implements OnInit {
         'The website features a complex and intricate layout.',
         'It encompasses multiple pages for a comprehensive user experience.',
       ],
-      index: 3,
+      index: 6,
       color: 'text-cyan-500',
       bg: 'hover:bg-cyan-500 hover:border-cyan-500',
     },
