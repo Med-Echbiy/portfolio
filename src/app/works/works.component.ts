@@ -32,7 +32,7 @@ export class WorksComponent implements OnInit {
     },
     {
       linkGithub: 'https://github.com/animotime-v3/yummy-s',
-      linkLive: 'ttps://yummy-zeta.vercel.app/',
+      linkLive: 'https://yummy-zeta.vercel.app/',
       image: 'assets/yummy.png',
       features: [
         'YUMMY: A dynamic Food Delivery app with animations.',
