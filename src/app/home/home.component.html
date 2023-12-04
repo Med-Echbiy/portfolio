@@ -33,82 +33,10 @@
     >
       My Work
     </h2>
-    <div
-      class="project grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-3 lg:justify-between"
-    >
-      <div class="flex flex-col">
-        <p class="subheading uppercase text-sm inter">01/project</p>
-        <h3 class="heading text-4xl text-yellow-400 font-semibold">YUMMY</h3>
-        <p class="mt-8 inter flex flex-col gap-y-3 text-sm max-w-md">
-          <span>YUMMY: A dynamic Food Delivery app with animations. </span>
-          <span>
-            Integrates with SanityCMS for efficient content management.</span
-          >
-          <span
-            >Admin dashboard: Real-time order tracking, data visualization, and
-            earnings insights.</span
-          >
-          <span>
-            User-focused: Personalized meal saving feature. Rewards system:
-            Point-based system for user engagement.
-          </span>
-        </p>
-        <div
-          class="justify-self-end justify-items-end flex items-center gap-3 mt-12"
-        >
-          <a href="" class="flex items-center gap-2"
-            >Github <ng-icon name="radixGithubLogo"></ng-icon>
-          </a>
-          <a
-            href="https://yummy-zeta.vercel.app/"
-            target="_blank"
-            class="flex items-center gap-2"
-            >Live <ng-icon name="radixPlay"></ng-icon>
-          </a>
-        </div>
-      </div>
-      <div
-        class="project_image drop-shadow-lg rounded-br-[80px] overflow-hidden"
-      >
-        <img src="assets/yummy.png" alt="" />
-      </div>
-    </div>
-    <!-- project 2 -->
-    <div
-      class="project grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-y-3 lg:justify-between mt-12"
-    >
-      <div class="flex flex-col">
-        <p class="subheading uppercase text-sm inter">02/project</p>
-        <h3 class="heading text-4xl text-orange-400 font-semibold">
-          ATLAS Travel
-        </h3>
-        <p class="mt-8 inter flex flex-col gap-y-3 text-sm max-w-md">
-          <span>Complete website development </span>
-          <span> Includes contact page and advanced filtering </span>
-          <span>Multilingual support </span>
-          <span>Features route and destination management system </span>
-        </p>
-        <div
-          class="justify-self-end justify-items-end flex items-center gap-3 mt-12"
-        >
-          <a href="" class="flex items-center gap-2"
-            >Github <ng-icon name="radixGithubLogo"></ng-icon>
-          </a>
-          <a
-            href="https://travelatlasmorocco.com/en/"
-            target="_blank"
-            class="flex items-center gap-2"
-            >Live <ng-icon name="radixPlay"></ng-icon>
-          </a>
-        </div>
-      </div>
-      <div
-        class="project_image drop-shadow-lg rounded-tl-[80px] overflow-hidden"
-      >
-        <img src="assets/atlas.png" alt="" />
-      </div>
-    </div>
-    <!-- project 3 -->
+    <ng-container *ngFor="let project of projects">
+      <app-work [project]="project"></app-work>
+    </ng-container>
+    <!-- more -->
     <div class="flex justify-center mt-24">
       <button
         type="button"
